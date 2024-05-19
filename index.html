@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+<body>
+    <h2>Student Management System</h2>
+    <div class="add-container">
+        <form id="add-student" method="post">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+    
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age">
+
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade">
+    
+            <div id="errorMessage" class="error"></div>
+
+            <button id="add" type="submit">
+                Add
+            </button>
+
+        </form>
+    </div>
+
+    <div class="show-container">
+        <label for="grade-filter" style="display: inline;">Filter By Grade:</label>
+        <select id="grade-filter" name="grade-filter">
+            <option value="All">All</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th><input type = "checkbox" id="selectAll" onclick="toggleAllCheckboxes(this)"></th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Date of Joining (yyyy-mm-dd)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added dynamically here using javascript -->
+                <!-- <tr>
+                    <td><input type = "checkbox" class="checkItem"></td>
+                    <td>Paramjot</td>
+                    <td>25</td>
+                    <td>A</td>
+                    <td>2024-05-19</td>
+                </tr> -->
+            </tbody>
+        </table>
+
+        <button id="delete" onClick="deleteStudent()">
+            Delete
+        </button>
+
+    </div>
+
+</body>
+</html>
