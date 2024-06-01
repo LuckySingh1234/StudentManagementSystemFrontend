@@ -76,7 +76,7 @@ function addStudentData(e) {
     const id = generateRandomId();
     const name = document.getElementById('name').value.trim();
     let age = document.getElementById('age').value.trim();
-    const grade = document.getElementById('grade').value.trim();
+    const grade = document.getElementById('grade').value.trim().toUpperCase();
 
     const errorMessage = document.getElementById('errorMessage');
     errorMessage.textContent = '';
